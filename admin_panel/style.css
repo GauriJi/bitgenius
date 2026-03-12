@@ -1,26 +1,61 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-    --light: #ffffffd5;
-    --primary: #1976D2;
-    --light-primary: #CFE8FF;
-    /* --grey: #f0ececd5; */
-    /* --grey: #dee2e6c4; */
-
-    --grey: #e4e4e4fd;
-    --dark-grey: #AAAAAA;
-    --dark: #363949;
-    --danger: #D32F2F;
-    --light-danger: #FECDD3;
-    --warning: #FBC02D;
-    --light-warning: #FFF2C6;
-    --success: #388E3C;
-    --light-success: #BBF7D0;
-    --light-text: #0066ff;
-    --dark-text: rgb(71, 219, 230);
-    --white: white;
-
+    /* Modern SaaS Color Palette */
+    --primary: #4F46E5; /* Indigo */
+    --light-primary: #EEF2FF;
+    --secondary: #22C55E; /* Green */
+    --accent: #F59E0B; /* Amber */
+    
+    --light: #FFFFFF; /* Pure white for cards */
+    --grey: #F8FAFC; /* Slate 50 - Background */
+    --dark-grey: #64748B; /* Slate 500 - Subtext */
+    --dark: #0F172A; /* Slate 900 - Headings & Text */
+    
+    --danger: #EF4444; /* Red 500 */
+    --light-danger: #FEF2F2;
+    --warning: #F59E0B;
+    --light-warning: #FFFBEB;
+    --success: #10B981; /* Emerald 500 */
+    --light-success: #ECFDF5;
+    
+    --light-text: #64748B;
+    --dark-text: #0F172A;
+    --white: #FFFFFF;
+    
+    /* Modern Shadows & Borders */
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    --transition-speed: 0.2s ease-in-out;
+    --border-radius-sm: 0.375rem;
+    --border-radius: 0.75rem; /* 12px */
+    --border-radius-lg: 1rem; /* 16px */
 }
+
+/* SaaS Utility Classes */
+.saas-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    padding: 1.5rem;
+    transition: box-shadow var(--transition-speed), transform var(--transition-speed);
+    border: 1px solid #E2E8F0; /* Slate 200 */
+}
+.saas-card:hover {
+    box-shadow: var(--hover-shadow);
+    transform: translateY(-2px);
+}
+.saas-badge {
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.saas-badge.success { background: var(--light-success); color: var(--success); }
+.saas-badge.warning { background: var(--light-warning); color: var(--warning); }
+.saas-badge.danger { background: var(--light-danger); color: var(--danger); }
+.saas-badge.primary { background: var(--light-primary); color: var(--primary); }
+
 
 * {
     margin: 0;
@@ -92,11 +127,14 @@ select.form-select {
 }
 
 body.dark {
-    --light: #181a1e;
-    --grey: #25252c;
-    --dark: #fbfbfb;
-    --light-text: rgb(71, 219, 230);
-    --white: #181a1e;
+    /* Modern SaaS Dark Mode Palette */
+    --light: #0F172A; /* Slate 900 */
+    --grey: #1E293B; /* Slate 800 */
+    --dark: #F8FAFC; /* Slate 50 */
+    --light-text: #94A3B8; /* Slate 400 */
+    --white: #1E293B; /* Slate 800 */
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    --hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
     -ms-overflow-style: none;
     /* IE and Edge */
     scrollbar-width: none;
@@ -1448,6 +1486,13 @@ div._flex-container button {
     align-items: center;
     grid-gap: 24px;
     cursor: pointer;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition-speed);
+}
+
+.content main .insights li:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: var(--hover-shadow);
 }
 
 .content main .insights li .bx {
@@ -1504,6 +1549,12 @@ div._flex-container button {
     background: var(--light);
     padding: 24px;
     overflow-x: auto;
+    box-shadow: var(--card-shadow);
+    transition: var(--transition-speed);
+}
+
+.content main .bottom-data>div:hover {
+    box-shadow: var(--hover-shadow);
 }
 
 .content main .bottom-data .header {

@@ -12,7 +12,7 @@
     <title>Student Dashboard</title>
     <link rel="shortcut icon" href="./images/logo.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=<?php echo time(); ?>">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/oranbyte-google-translator.css">
 
@@ -248,6 +248,17 @@
         </aside>
 
         <main>
+            <div class="welcome-banner" style="background: linear-gradient(135deg, #0052cc, #00b8d9); border-radius: 20px; padding: 30px; margin-bottom: 30px; color: white; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 15px 30px rgba(0, 82, 204, 0.3); overflow: hidden; position: relative;">
+                <div style="z-index: 2;">
+                    <h2 style="margin: 0; font-size: 32px; font-weight: 700; color: white;">Welcome back! 🎓</h2>
+                    <p style="margin: 10px 0 0 0; font-size: 16px; opacity: 0.9; color: white;">Ready to crush your classes today?</p>
+                </div>
+                <div style="z-index: 2;">
+                    <img src="../images/children.png" style="height: 120px; margin-bottom: -40px; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.2));">
+                </div>
+                <div style="position: absolute; right: -50px; top: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%; z-index: 1;"></div>
+            </div>
+
             <h1>Attendance</h1>
             <div class="subjects">
                 <div class="eg">

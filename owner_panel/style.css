@@ -3,30 +3,61 @@
     justify-content: center;
     display: flex;
     flex-direction: row;
+    gap: 30px;
 }
 @media (max-width: 700px){
 	.main{
 		flex-direction: column;
 		justify-content: center;
+        align-items: center;
 	}
 }
+
+/* Modern Card Styling added to match other panels */
+.card {
+    border: none !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+    transition: all 0.2s ease-in-out !important;
+    overflow: hidden;
+    border: 1px solid #E2E8F0; /* Slate 200 */
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04) !important;
+}
+
+.card .card-body {
+    padding: 24px;
+    background-color: #ffffff;
+}
+
+.card .btn-primary {
+    background-color: #4F46E5 !important; /* SaaS Indigo */
+    border-color: #4F46E5 !important;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: 500;
+}
+
 .card1{
-	margin-left: 5%;
+	margin-left: 0;
 }
 @media (max-width: 700px){
 	.card1{
-		margin-left: 10%;
+		margin-left: 0;
 	}
 }
 .card2{
-	margin-left: 5%;
+	margin-left: 0;
 }
 @media (max-width: 700px){
 	.card2{
-		margin-top: 10%;
-		margin-left: 10%;
+		margin-top: 5%;
+		margin-left: 0;
 	}
 }
 footer{
-	margin-top: 3%;
+	margin-top: 5%;
 }

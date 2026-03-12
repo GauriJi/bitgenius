@@ -1,11 +1,11 @@
 <?php
-    $server = "localhost";
+    $host = "localhost";
    
     $user = "root";
     $password = "";
-    $db = "_sms";
+    $db = "student_management";
     
-    $conn = mysqli_connect($server, $user, $password, $db);
+    $conn = mysqli_connect($host, $user, $password, $db);
 
     if (!$conn) {
         header('Location: ../errors/error.html');

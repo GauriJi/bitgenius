@@ -418,16 +418,18 @@
         </div>
         <div class="bottom-data">
 
-            <div class="orders">
+        <div class="bottom-data">
+
+            <div class="orders saas-card" style="margin-top: 20px;">
 
                 <!-- Nav tabs -->
-                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <ul class="nav nav-tabs" id="myTab" role="tablist" style="border-bottom: 2px solid #E2E8F0;">
                     <li class="nav-item me-1" role="presentation">
-                        <button class="nav-link active " id="addTeacherTab" data-bs-toggle="tab" data-bs-target="#home"
-                            type="button" role="tab" aria-controls="home" aria-selected="true">Add Teacher</button>
+                        <button class="nav-link active fw-bold" id="addTeacherTab" data-bs-toggle="tab" data-bs-target="#home"
+                            type="button" role="tab" aria-controls="home" aria-selected="true" style="color: #4F46E5;">Add Teacher</button>
                     </li>
                     <li class="nav-item me-1" role="presentation">
-                        <button class="nav-link" id="showTeacherTab" data-bs-toggle="tab" data-bs-target="#profile"
+                        <button class="nav-link fw-bold text-secondary" id="showTeacherTab" data-bs-toggle="tab" data-bs-target="#profile"
                             type="button" role="tab" aria-controls="profile" aria-selected="false"
                             onclick="showTeachers()">Show
                             Teachers</button>
@@ -435,7 +437,7 @@
                     
                     
                     <li class="nav-item me-1" role="presentation">
-                        <button class="nav-link" id="show-leave-tab" data-bs-toggle="tab" data-bs-target="#leave-tab"
+                        <button class="nav-link fw-bold text-secondary" id="show-leave-tab" data-bs-toggle="tab" data-bs-target="#leave-tab"
                             type="button" role="tab" aria-controls="leave-tab" aria-selected="false"
                           >Teachers Leave</button>
                     </li>
@@ -477,36 +479,22 @@
                             <br>
 
                             <div class="container add-remove">
-                                <ul class="insights">
+                                <ul class="insights" style="display: flex; gap: 20px; list-style: none; padding: 0;">
                                     <a class="addlink" data-bs-toggle="modal" data-bs-target="#addTeacherModal"
-                                        id="addTeacherButton">
-                                        <li class="additem">
-                                            <!-- <i class='bx bx-calendar-check'></i> -->
-                                            <i class='bx bxs-user-plus'></i>
-                                            <span class="info">
-                                                <h3>
-                                                    Add
-                                                </h3>
-                                                <h3>Teacher</h3>
+                                        id="addTeacherButton" style="flex: 1; text-decoration: none;">
+                                        <li class="additem saas-card" style="display: flex; align-items: center; justify-content: center; flex-direction: column; cursor: pointer; border: 2px dashed #4F46E5; background: #EEF2FF;">
+                                            <i class='bx bxs-user-plus' style="font-size: 40px; color: #4F46E5;"></i>
+                                            <span class="info" style="text-align: center; margin-top: 10px; color: #4F46E5;">
+                                                <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Add Teacher</h3>
                                             </span>
                                         </li>
                                     </a>
-                                    <!-- model add student -->
 
-
-
-
-
-                                    <!-- end of model add student -->
-
-                                    <a class="removelink" data-bs-toggle="modal" data-bs-target="#removeStudentModel">
-                                        <li class="removeitem">
-                                            <i class='bx bxs-user-minus'></i>
-                                            <span class="info">
-                                                <h3>
-                                                    Remove
-                                                </h3>
-                                                <h3>Teacher</h3>
+                                    <a class="removelink" data-bs-toggle="modal" data-bs-target="#removeStudentModel" style="flex: 1; text-decoration: none;">
+                                        <li class="removeitem saas-card" style="display: flex; align-items: center; justify-content: center; flex-direction: column; cursor: pointer; border: 2px dashed #EF4444; background: #FEF2F2;">
+                                            <i class='bx bxs-user-minus' style="font-size: 40px; color: #EF4444;"></i>
+                                            <span class="info" style="text-align: center; margin-top: 10px; color: #EF4444;">
+                                                <h3 style="margin: 0; font-size: 18px; font-weight: 600;">Remove Teacher</h3>
                                             </span>
                                         </li>
                                     </a>

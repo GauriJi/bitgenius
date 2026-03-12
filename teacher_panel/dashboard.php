@@ -60,6 +60,18 @@
             </a> -->
         </div>
 
+        <div class="welcome-banner" style="background: linear-gradient(135deg, #0052cc, #00b8d9); border-radius: 20px; padding: 30px; margin-bottom: 30px; color: white; display: flex; align-items: center; justify-content: space-between; box-shadow: 0 15px 30px rgba(0, 82, 204, 0.3); overflow: hidden; position: relative;">
+            <div style="z-index: 2;">
+                <h2 style="margin: 0; font-size: 32px; font-weight: 700;">Welcome back, Teacher! 👋</h2>
+                <p style="margin: 10px 0 0 0; font-size: 16px; opacity: 0.9;">Here's an overview of your classes and tasks today.</p>
+            </div>
+            <div style="z-index: 2;">
+                <img src="../images/children.png" style="height: 140px; margin-bottom: -40px; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.2));">
+            </div>
+            <!-- Decorative circle -->
+            <div style="position: absolute; right: -50px; top: -50px; width: 200px; height: 200px; background: rgba(255,255,255,0.1); border-radius: 50%; z-index: 1;"></div>
+        </div>
+
         <!-- Insights -->
         <ul class="insights">
             <li>
@@ -94,8 +106,25 @@
         </ul>
         <!-- End of Insights -->
 
-        <div class="bottom-data">
-            <div class="orders">
+        <!-- SaaS Analytics Charts -->
+        <div class="bottom-data" style="display: grid; grid-template-columns: 2fr 1fr; gap: 24px; margin-top: 24px;">
+            <div class="saas-card">
+                <div class="header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h3 style="font-size: 18px; font-weight: 600; color: #0F172A;"><i class='fas fa-chart-line' style="color: #4F46E5; margin-right: 8px;"></i> Class Performance</h3>
+                </div>
+                <canvas id="performanceChart" height="100"></canvas>
+            </div>
+
+            <div class="saas-card">
+                <div class="header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h3 style="font-size: 18px; font-weight: 600; color: #0F172A;"><i class='fas fa-chart-pie' style="color: #F59E0B; margin-right: 8px;"></i> Today's Attendance</h3>
+                </div>
+                <canvas id="attendanceChart" height="200"></canvas>
+            </div>
+        </div>
+
+        <div class="bottom-data" style="margin-top: 24px;">
+            <div class="orders saas-card">
                 <div class="header">
                     <i class='bx bx-receipt'></i>
                     <h3 id="text-heading">Latest Notices</h3>
@@ -156,12 +185,48 @@
             </div>
 
             <!-- End of Reminders-->
-
-            
         </div>
 <br>
     </main>
 </div>
+
+<!-- SaaS Chart.js Initialization -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    if(document.getElementById('performanceChart')) {
+        const ctxGrowth = document.getElementById('performanceChart').getContext('2d');
+        new Chart(ctxGrowth, {
+            type: 'bar',
+            data: {
+                labels: ['Midterm', 'Quiz 1', 'Quiz 2', 'Finals'],
+                datasets: [{
+                    label: 'Average Score',
+                    data: [82, 75, 88, 91],
+                    backgroundColor: '#4F46E5',
+                    borderRadius: 5
+                }]
+            },
+            options: { responsive: true, plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true } } }
+        });
+    }
+
+    if(document.getElementById('attendanceChart')) {
+        const ctxAtt = document.getElementById('attendanceChart').getContext('2d');
+        new Chart(ctxAtt, {
+            type: 'doughnut',
+            data: {
+                labels: ['Present', 'Absent', 'Late'],
+                datasets: [{
+                    data: [45, 5, 2],
+                    backgroundColor: ['#10B981', '#EF4444', '#F59E0B'],
+                    borderWidth: 0
+                }]
+            },
+            options: { responsive: true, cutout: '75%', plugins: { legend: { position: 'bottom' } } }
+        });
+    }
+});
+</script>
 
 <script src="../assets/js/dashboard.js"></script>
 <?php include("partials/_footer.php");

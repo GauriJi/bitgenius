@@ -2,7 +2,7 @@
     <a href="dashboard.php" class="logo" style="padding: 20px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
         <!-- <i class='bx bx-book-bookmark'></i> -->
         <img src="../images/1.png" style="width: 40px; margin-right: 10px;">
-          <div class="logo-name" style="color: white; font-weight: 700; font-size: 24px;"><span style="color: #4F46E5;">SaaS</span><span style="color: #F8FAFC;">ERP</span></div>
+          <div class="logo-name" style="color: white; font-weight: 700; font-size: 24px;"><span style="color: #4F46E5;">Bitgenius</span><span style="color: #F8FAFC;"></span></div>
     </a>
     
     <ul class="side-menu-opener">

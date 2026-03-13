@@ -18,18 +18,18 @@
   <input type="checkbox" id="theme-toggle" hidden>
   <label for="theme-toggle" class="theme-toggle" onload="checkAndChangeTheme()"></label>
 
-  <div class="dropdown dropdown-center" style="margin-left: auto;">
+  <!-- <div class="dropdown dropdown-center" style="margin-left: auto;">
                 <a href="#" class="notif"  href="#"  data-bs-toggle="dropdown" aria-expanded="false" style="position: relative; color: #64748B; font-size: 20px; margin-right: 20px;">
                     <i class='fas fa-bell'></i>
                     <span class="count" style="position: absolute; top: -5px; right: -8px; background: #EF4444; color: white; border-radius: 50%; width: 18px; height: 18px; font-size: 10px; display: flex; justify-content: center; align-items: center;">3</span>
                 </a>
-              
-                <ul class="dropdown-menu">
+               -->
+                <!-- <ul class="dropdown-menu">
                   <li><a class="dropdown-item">Server restart scheduled</a></li>
                   <li><a class="dropdown-item">New teacher joined</a></li>
                   <li><a class="dropdown-item">Payment received</a></li>
                 </ul>
-              </div>
+              </div> -->
 
 
   <a href="settings.php" class="profile" id="navbar_profile_pic" style="margin-right: 15px;">
